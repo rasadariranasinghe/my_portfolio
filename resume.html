@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Resume - Rasadari Ranasinghe</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
 
@@ -25,9 +25,16 @@
     <!-- Page Content -->
     <main>
         <section id="resume">
-            <div class="resume-container">
+            <div class="resume-container reveal">
                 <h2 class="section-title resume-title">Resume</h2>
-                <p>You can download my resume below:</p>
+                <p>Data Analyst | SQL | Python | Tableau | Salesforce - based in Toronto, ON.</p>
+                <ul class="resume-highlights">
+                    <li>ESG Coordinator at Vosyn Inc. (May 2026 - Present)</li>
+                    <li>Data Analyst (Volunteer) at U+ Education - 147,000+ Job Bank records, Tableau dashboards</li>
+                    <li>Data Analytics Certificate (A+), University of Toronto School of Continuing Studies</li>
+                    <li>B.Sc. (Honours) Environmental Sciences, First-Class Honours, University of Colombo</li>
+                </ul>
+                <p>Updated October 2026. Download the full two-page resume below:</p>
                 <a href="static/resume/Rasadari_Ranasinghe_Resume.pdf" target="_blank"
                     class="cta-button">Download Resume</a>
             </div>
@@ -38,6 +45,28 @@
     <footer>
         Rasadari's Portfolio © 2026
     </footer>
+
+    <button id="topBtn" title="Back to top" aria-label="Back to top">&#8593;</button>
+    <script>
+        (function () {
+            var revealEls = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+                    });
+                }, { threshold: 0.12 });
+                revealEls.forEach(function (el) { io.observe(el); });
+            } else {
+                revealEls.forEach(function (el) { el.classList.add('visible'); });
+            }
+            var btn = document.getElementById('topBtn');
+            window.addEventListener('scroll', function () {
+                btn.classList.toggle('show', window.scrollY > 400);
+            });
+            btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        })();
+    </script>
 </body>
 
 </html>

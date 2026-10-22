@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Rasadari Ranasinghe - Data Analyst</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
 
@@ -24,20 +24,41 @@
 
     <!-- Page Content -->
     <main>
-        <section id="home">
-            <div class="intro">
-                <!-- Profile photo -->
-                <img src="static/images/Rasadari.jpg" alt="Rasadari Ranasinghe" class="profile-photo">
-
-                <!-- Welcome message -->
-                <h1>Hello, I'm Rasadari Ranasinghe</h1>
-                <p>I am a data analyst with a passion for solving complex problems using data. I specialize in data
-                    extraction, data transformation, data visualization, statistical analysis, and data-driven
-                    storytelling. I currently work as an ESG Coordinator at Vosyn Inc. and volunteer as a Data Analyst with U+ Education, analyzing 147,000+ Canadian Job Bank records. Welcome to my professional portfolio.</p>
-
-                <!-- Call to Action Button -->
-                <a href="projects.html" class="cta-button">Explore My Projects</a>
+        <!-- Hero -->
+        <section class="hero">
+            <img src="static/images/Rasadari.jpg" alt="Rasadari Ranasinghe" class="profile-photo">
+            <h1>Rasadari Ranasinghe</h1>
+            <p class="hero-title">Data Analyst | SQL | Python | Tableau | Salesforce</p>
+            <p class="hero-sub">Data Analyst with 4+ years of experience across data analysis, ESG, banking
+                operations, and university research support. I turn raw records into reliable insights with clean
+                data, clear dashboards, and documented, reusable workflows.</p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="cta-button">View My Projects</a>
+                <a href="static/resume/Rasadari_Ranasinghe_Resume.pdf" target="_blank"
+                    class="cta-button cta-secondary">Download Resume</a>
             </div>
+            <div class="stats reveal">
+                <div class="stat"><span class="stat-num">147,000+</span><span class="stat-label">Canadian Job Bank
+                        records analyzed (U+ Education)</span></div>
+                <div class="stat"><span class="stat-num">41,474</span><span class="stat-label">Toronto program records
+                        standardized into one inventory</span></div>
+                <div class="stat"><span class="stat-num">1,000+</span><span class="stat-label">Job titles standardized
+                        to the NOC 2021 taxonomy</span></div>
+                <div class="stat"><span class="stat-num">200+</span><span class="stat-label">Students taught statistics,
+                        ArcGIS, Minitab, and SPSS</span></div>
+            </div>
+        </section>
+
+        <!-- Intro -->
+        <section class="intro-section reveal">
+            <h2 class="section-title">What I Do</h2>
+            <p>I specialize in data extraction, data transformation, data visualization, statistical analysis, and
+                data-driven storytelling. I currently work as an ESG Coordinator at Vosyn Inc., where I clean and
+                validate sustainability data and build trackers the team can trust, and I volunteer as a Data Analyst
+                with U+ Education in Toronto.</p>
+            <p>My work is grounded in accuracy: data quality checks, documented data standards, and findings
+                explained clearly to non-technical audiences.</p>
+            <a href="about.html" class="cta-button">More About Me</a>
         </section>
     </main>
 
@@ -45,6 +66,28 @@
     <footer>
         Rasadari's Portfolio © 2026
     </footer>
+
+    <button id="topBtn" title="Back to top" aria-label="Back to top">&#8593;</button>
+    <script>
+        (function () {
+            var revealEls = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+                    });
+                }, { threshold: 0.12 });
+                revealEls.forEach(function (el) { io.observe(el); });
+            } else {
+                revealEls.forEach(function (el) { el.classList.add('visible'); });
+            }
+            var btn = document.getElementById('topBtn');
+            window.addEventListener('scroll', function () {
+                btn.classList.toggle('show', window.scrollY > 400);
+            });
+            btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        })();
+    </script>
 </body>
 
 </html>

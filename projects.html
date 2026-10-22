@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects - Rasadari Ranasinghe</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
 
@@ -26,109 +26,122 @@
     <main>
         <section id="projects">
             <h2 class="section-title">Current Projects</h2>
-            <div class="project-container">
-                <!-- Current Project 1 -->
-                <div class="project">
-                    <div class="project-info">
-                        <h3>Youth Workshop Gap Analysis (DA-37)</h3>
-                        <p><strong>Excel | Data Cleaning | Gap Matrix</strong> - Volunteer project for U+
-                            Education. Standardized 38,168 recreation and 3,306 library program records from
-                            Toronto open data into one inventory, correcting a placeholder maximum age (120) in
-                            14,220 rows. Built a gap matrix across nine topic categories that showed public
-                            speaking as the clearest opportunity, and recommended three workshop pilots for U+.</p>
-                    </div>
-                </div>
+            <div class="case-container">
 
-                <!-- Current Project 2 -->
-                <div class="project">
-                    <div class="project-info">
-                        <h3>Volunteer-to-Career Intelligence Platform (DA-42)</h3>
-                        <p><strong>Python | SQL | Tableau | NOC 2021</strong> - Volunteer project for U+ Education.
-                            Analyzing 147,000+ Canadian Job Bank records to surface labour-market and occupation
-                            trends, with a four-page Tableau dashboard covering Jobs by NOC Category, Jobs by
-                            Province, Average Wage by Occupation, and Partner Prospects. Standardized 1,000+
-                            fragmented job titles using the NOC 2021 taxonomy for consistent reporting.</p>
-                    </div>
-                </div>
+                <article class="case-study reveal">
+                    <h3>Youth Workshop Gap Analysis (DA-37) - U+ Education</h3>
+                    <div class="tool-tags"><span>Excel</span><span>Data Cleaning</span><span>Gap Matrix</span><span>Toronto Open Data</span></div>
+                    <div class="result-banner"><strong>Result:</strong> Public speaking stood out as the clearest
+                        underserved topic across nine categories, and U+ received a recommendation for three pilot
+                        workshops.</div>
+                    <div class="cs-row"><div class="cs-label">Problem</div><p>U+ Education needed evidence, not
+                        guesswork, on which youth workshop topics Toronto programs already cover well and which ones
+                        they leave out.</p></div>
+                    <div class="cs-row"><div class="cs-label">Data</div><p>38,168 recreation program records and 3,306
+                        library program records from Toronto open data.</p></div>
+                    <div class="cs-row"><div class="cs-label">Method</div><p>Standardized both sources into one
+                        inventory in Excel, correcting a placeholder maximum age of 120 in 14,220 rows, then built a
+                        gap matrix across nine topic categories.</p></div>
+                    <div class="cs-row"><div class="cs-label">Insight</div><p>Most categories were well covered by
+                        existing programs; public speaking had the thinnest coverage, making it the strongest
+                        opportunity for new U+ workshops.</p></div>
+                </article>
 
-                <!-- Current Project 3 -->
-                <div class="project">
-                    <div class="project-info">
-                        <h3>AI Concierge Agent (Roomie)</h3>
-                        <p><strong>Salesforce Agentforce | Salesforce Flow | Data Modeling</strong> - Personal
-                            project. Designed and built an AI concierge agent in Salesforce Agentforce for customer
-                            onboarding, room booking, and food ordering, with Autolaunched Flows that validate each
-                            customer before any booking or order is created.</p>
-                    </div>
-                </div>
+                <article class="case-study reveal">
+                    <h3>Volunteer-to-Career Intelligence Platform (DA-42) - U+ Education</h3>
+                    <div class="tool-tags"><span>Python (Pandas)</span><span>SQL</span><span>Tableau</span><span>NOC 2021</span></div>
+                    <div class="result-banner"><strong>Result:</strong> A four-page Tableau dashboard the team can
+                        explore by NOC category, province, average wage by occupation, and partner prospects.</div>
+                    <div class="cs-row"><div class="cs-label">Problem</div><p>U+ needed a reliable way to surface
+                        labour-market and occupation trends from a large, messy national job dataset.</p></div>
+                    <div class="cs-row"><div class="cs-label">Data</div><p>147,000+ Canadian Job Bank records.</p></div>
+                    <div class="cs-row"><div class="cs-label">Method</div><p>Clean and validate data with Python/Pandas
+                        and SQL, flagging missing values and duplicates, and lead the dashboard and data model
+                        development. Applied the NOC 2021 taxonomy to standardize 1,000+ fragmented job titles for
+                        consistent reporting.</p></div>
+                    <div class="cs-row"><div class="cs-label">Insight</div><p>With titles standardized and data
+                        validated, occupation trends can be compared consistently across provinces and wage levels,
+                        instead of being distorted by inconsistent job naming.</p></div>
+                </article>
 
-                <!-- Current Project 4 -->
-                <div class="project">
-                    <div class="project-info">
-                        <h3>Crowdfunding ETL and Database Analysis</h3>
-                        <p><strong>Python | Pandas | PostgreSQL | SQL</strong> - Built an ETL pipeline that cleaned
-                            raw campaign data into four normalized tables in a PostgreSQL database designed from an
-                            ERD, so campaign, category, and contact data can be queried consistently with SQL.</p>
-                    </div>
-                </div>
+                <article class="case-study reveal">
+                    <h3>AI Concierge Agent (Roomie) - Personal Project</h3>
+                    <div class="tool-tags"><span>Salesforce Agentforce</span><span>Salesforce Flow</span><span>Data Modeling</span></div>
+                    <div class="result-banner"><strong>Result:</strong> An agent that handles customer onboarding,
+                        room booking, and food ordering, and never creates a booking or order for an unvalidated
+                        customer.</div>
+                    <div class="cs-row"><div class="cs-label">Problem</div><p>Automated bookings and orders are only
+                        trustworthy if the customer is verified before anything is created.</p></div>
+                    <div class="cs-row"><div class="cs-label">Data</div><p>Customer records modelled in Salesforce,
+                        with onboarding, booking, and ordering data.</p></div>
+                    <div class="cs-row"><div class="cs-label">Method</div><p>Designed and built the agent in Salesforce
+                        Agentforce, with Autolaunched Flows that validate each customer before any booking or order
+                        is created.</p></div>
+                    <div class="cs-row"><div class="cs-label">Insight</div><p>Putting validation inside the flow,
+                        before record creation, prevents bad data at the source instead of cleaning it up afterwards.</p></div>
+                </article>
+
+                <article class="case-study reveal">
+                    <h3>Crowdfunding ETL and Database Analysis</h3>
+                    <div class="tool-tags"><span>Python</span><span>Pandas</span><span>PostgreSQL</span><span>SQL</span><span>ERD</span></div>
+                    <div class="result-banner"><strong>Result:</strong> Raw campaign data became four normalized
+                        PostgreSQL tables that can be queried consistently with SQL.</div>
+                    <div class="cs-row"><div class="cs-label">Problem</div><p>Raw crowdfunding campaign data in a
+                        single flat file could not be queried reliably across campaigns, categories, and contacts.</p></div>
+                    <div class="cs-row"><div class="cs-label">Data</div><p>Raw crowdfunding campaign, category, and
+                        contact data.</p></div>
+                    <div class="cs-row"><div class="cs-label">Method</div><p>Built an ETL pipeline with Python and
+                        Pandas that cleaned the raw data into four normalized tables in a PostgreSQL database
+                        designed from an ERD.</p></div>
+                    <div class="cs-row"><div class="cs-label">Insight</div><p>A normalized schema designed up front
+                        makes every later SQL query simpler and more consistent.</p></div>
+                    <p style="margin-top:14px"><a href="https://github.com/rasadariranasinghe/Crowdfunding_ETL"
+                            class="cta-button" target="_blank">View Project on GitHub</a></p>
+                </article>
+
             </div>
 
             <h2 class="section-title">Earlier Projects</h2>
             <div class="project-container">
-                <!-- Earlier Project 1 -->
-                <div class="project">
+                <div class="project reveal">
                     <img src="static/images/project4.jpg" alt="Weather Prediction Model">
                     <div class="project-info">
                         <h3>Weather Prediction Model</h3>
-                        <p>The goal of this project is to predict maximum daily temperature (Temp_Max) based on
-                            various weather-related features, including precipitation, snowfall, and elevation.
-                            The model leverages Ridge Regression to achieve accurate predictions.</p>
+                        <p>Predicting maximum daily temperature (Temp_Max) from precipitation, snowfall, and
+                            elevation, using Ridge Regression.</p>
                         <a href="https://github.com/rasadariranasinghe/Weather_prediction" class="cta-button"
-                            target="_blank">
-                            <i class="fas fa-external-link-alt"></i> View Project
-                        </a>
+                            target="_blank">View Project</a>
                     </div>
                 </div>
 
-                <!-- Earlier Project 2 -->
-                <div class="project">
+                <div class="project reveal">
                     <img src="static/images/project1.jpg" alt="Toronto Crime Patterns">
                     <div class="project-info">
                         <h3>Toronto Crime Patterns</h3>
-                        <p>Explore crime trends in Toronto during the COVID-19 pandemic (2014-2022). This project
-                            visualizes shifts in crime patterns, providing insights into how the pandemic impacted
-                            the city.</p>
-                        <a href="https://github.com/rasadariranasinghe/project_3" class="cta-button" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> View Project
-                        </a>
+                        <p>Crime trends in Toronto during the COVID-19 pandemic (2014-2022), visualizing how patterns
+                            shifted across the city.</p>
+                        <a href="https://github.com/rasadariranasinghe/project_3" class="cta-button" target="_blank">View Project</a>
                     </div>
                 </div>
 
-                <!-- Earlier Project 3 -->
-                <div class="project">
+                <div class="project reveal">
                     <img src="static/images/project2.jpg" alt="Titanic Survival Analysis">
                     <div class="project-info">
                         <h3>Titanic Survival Analysis</h3>
-                        <p>Analyze survival rates of Titanic passengers to uncover the impact of socio-economic
-                            factors on survival. This study provides valuable insights into disaster preparedness.</p>
+                        <p>Survival rates of Titanic passengers and the impact of socio-economic factors on survival.</p>
                         <a href="https://github.com/rasadariranasinghe/titanic_data_tableau/blob/main/Titanic1_dahboard.png"
-                            class="cta-button" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> View Project
-                        </a>
+                            class="cta-button" target="_blank">View Project</a>
                     </div>
                 </div>
 
-                <!-- Earlier Project 4 -->
-                <div class="project">
+                <div class="project reveal">
                     <img src="static/images/project3.jpg" alt="Forgotten Florida Race">
                     <div class="project-info">
                         <h3>Florida Race Dashboard</h3>
                         <p>Interactive dashboard analyzing race data from the Forgotten Florida event (50 Miler
-                            category). Gain insights into participants' demographics and performance trends.</p>
+                            category): participant demographics and performance trends.</p>
                         <a href="https://github.com/rasadariranasinghe/Forgotten-Florida-Race-Data-Analysis"
-                            class="cta-button" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> View Project
-                        </a>
+                            class="cta-button" target="_blank">View Project</a>
                     </div>
                 </div>
             </div>
@@ -140,6 +153,28 @@
     <footer>
         Rasadari's Portfolio © 2026
     </footer>
+
+    <button id="topBtn" title="Back to top" aria-label="Back to top">&#8593;</button>
+    <script>
+        (function () {
+            var revealEls = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+                    });
+                }, { threshold: 0.12 });
+                revealEls.forEach(function (el) { io.observe(el); });
+            } else {
+                revealEls.forEach(function (el) { el.classList.add('visible'); });
+            }
+            var btn = document.getElementById('topBtn');
+            window.addEventListener('scroll', function () {
+                btn.classList.toggle('show', window.scrollY > 400);
+            });
+            btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        })();
+    </script>
 </body>
 
 </html>
